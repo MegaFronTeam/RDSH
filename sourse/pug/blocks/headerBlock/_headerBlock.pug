@@ -3,32 +3,6 @@ mixin headerBlock()
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
 			+e.row.row
-				+e.bannerCol.col-lg
-					+e.block
-						+e.txtSm Будь в самом большом детском движении России
-						h4 Нас более 800 000 человек!
-					+b.linkBlock(href="#")
-						+pic('banner-1.jpg','bg','')(class="picture-bg")
-					+b.linkBlock--whithTxt(href="#")
-						+pic('banner-2.jpg','bg','')(class="picture-bg")
-						+e.block
-							+e.text
-								+e.subtitle Всероссийский конкурс
-								h4 Викторина победы
-							+e.iconArrow
-								+icon('arrow-forward')
-					+b.calendarBlock
-						.row.align-items-center
-							.col-auto
-								+e.calendar
-									+e.day Пятница
-									+e.wrap
-										+e.number 22
-										+e.month Ноября
-							.col
-								+e.descr На&nbsp;киберлиге РДШ уже 3000&nbsp;участников
-
-
 				+e.sliderCol.col-lg-8
 					+b.mainSlider
 						+e.slider--js.swiper-container
@@ -65,6 +39,33 @@ mixin headerBlock()
 								
 						.text-center
 							.swiper-pagination
+				+e.bannerCol.col-lg.order-lg-first
+					+e.block
+						+e.txtSm Будь в самом большом детском движении России
+						h4 Нас более 800 000 человек!
+					+b.linkBlock(href="#")
+						+pic('banner-1.jpg','bg','')(class="picture-bg")
+					+b.linkBlock--whithTxt(href="#")
+						+pic('banner-2.jpg','bg','')(class="picture-bg")
+						+e.block
+							+e.text
+								+e.subtitle Всероссийский конкурс
+								h4 Викторина победы
+							+e.iconArrow
+								+icon('arrow-forward')
+					+b.calendarBlock
+						.row.align-items-center
+							.col-auto
+								+e.calendar
+									+e.day Пятница
+									+e.wrap
+										+e.number 22
+										+e.month Ноября
+							.col
+								+e.descr На&nbsp;киберлиге РДШ уже 3000&nbsp;участников
+			.row
+				.col-lg-4
+				+e.bannerCol.col-lg
 					+e.foot
 						+soc()
 					+b.theme

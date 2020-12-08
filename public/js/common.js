@@ -307,6 +307,14 @@ function eventHandler() {
 			768: {
 				slidesPerView: 4,
 				slidesPerColumn: 3
+			},
+			992: {
+				slidesPerView: 3,
+				slidesPerColumn: 3
+			},
+			1200: {
+				slidesPerView: 4,
+				slidesPerColumn: 3
 			}
 		},
 		pagination: {

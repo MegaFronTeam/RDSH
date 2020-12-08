@@ -81,6 +81,7 @@
 		place-items: center;
 		@include a-cent(y);
 		right: rem(10px);
+		outline: none !important;
 		
 		.icon {
 			font-size: rem(20);

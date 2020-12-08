@@ -81,6 +81,20 @@
 			color: #fff;
 		}
 
+		&::before {
+			content: '';
+			position: absolute;
+			right: -7.5px;
+			bottom: rem(25);
+			width: 0;
+			height: 0;
+			border: .4em solid;
+			border-color: transparent transparent rgba($color: #457dff, $alpha: 0.1) rgba($color: #457dff, $alpha: 0.1);
+			border-radius: 4px;
+			transform: rotate(-135deg);
+			
+		}
+
 	}
 
 	@include media-breakpoint-up(sm) {}
