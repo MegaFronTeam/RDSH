@@ -15,14 +15,15 @@ block pagecontent
 		style.
 			.bg {
 				
-				background: linear-gradient(-240.64deg, #5b6ceb 0%, #7bc2ff 100%);
+				background: linear-gradient(rgba(0, 0, 0, .24), rgba(0, 0, 0, .24)), no-repeat center/cover url(img/@2x/webp/main-bg-1.webp);
 			}
 		+header()
 			+topLine()
 		+headerBlock()
-			+e.item.active(href="#" style="background-image: linear-gradient(to bottom, #5b6ceb 0%, #7bc2ff 100%);")
+			+e.item(href="#" )
+			+e.item.active(href="#" style="background: linear-gradient(rgba(0, 0, 0, .24), rgba(0, 0, 0, .24)), no-repeat center/cover url(img/@1x/webp/main-bg-1.webp)")
 			+e.item(href="#")
-			+e.item(href="#")
+
 	//- +sForm()
 	//- +sContact()
 	//- +footer()

@@ -1,8 +1,10 @@
 // start .header
 .header {
-	padding-top: 15px;
+	padding-top: rem(15px);
+	padding-bottom: rem(20);
 	@include media-breakpoint-up(lg) {
-		padding-top: 30px;
+		padding-top: rem(30px);
+		padding-bottom: rem(45);
 	}
 
 

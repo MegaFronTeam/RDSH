@@ -3,6 +3,7 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sQuestions/_sQuestions.pug
 
 block variables
 	- let  mainPage= 'bg'
@@ -19,10 +20,7 @@ block pagecontent
 			}
 		+header()
 			+topLine()
-		+headerBlock()
-			+e.item.active(href="#" style="background-image: linear-gradient(to bottom, #5b6ceb 0%, #7bc2ff 100%);")
-			+e.item(href="#")
-			+e.item(href="#")
+		+sQuestions()
 	//- +sForm()
 	//- +sContact()
 	//- +footer()

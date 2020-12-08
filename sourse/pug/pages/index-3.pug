@@ -15,14 +15,15 @@ block pagecontent
 		style.
 			.bg {
 				
-				background: linear-gradient(-240.64deg, #5b6ceb 0%, #7bc2ff 100%);
+				background: no-repeat center/cover url(img/@2x/webp/main-bg-2.webp);
 			}
 		+header()
 			+topLine()
 		+headerBlock()
-			+e.item.active(href="#" style="background-image: linear-gradient(to bottom, #5b6ceb 0%, #7bc2ff 100%);")
+			+e.item(href="#" )
 			+e.item(href="#")
-			+e.item(href="#")
+			+e.item.active(href="#" style="background: url(img/@1x/webp/main-bg-2.webp)")
+
 	//- +sForm()
 	//- +sContact()
 	//- +footer()

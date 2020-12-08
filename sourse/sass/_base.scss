@@ -45,6 +45,10 @@ html {
 	border-radius: $border-radius;
 }
 
+.bg {
+	background-color: $secondary;
+}
+
 
 body {
 	min-width: 320px;
@@ -118,8 +122,14 @@ body {
 
 .section {
 	@include bgs;
-	padding-top: var(--sPT);
-	padding-bottom: var(--sPB);
+
+	&__inner {
+		padding-left: var(--sPL);
+		padding-right: var(--sPR);
+		padding-top: var(--sPT);
+		padding-bottom: var(--sPB);
+		@extend .bg-w;
+	}
 }
 
 .section-title {

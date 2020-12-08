@@ -296,9 +296,19 @@ function eventHandler() {
 	}), _defaultSl);
 	var swiperHeaderBlock = new Swiper('.mainSlider__slider--js', {
 		// ...defaultSl,
-		slidesPerView: 4,
+		slidesPerView: 2,
 		slidesPerColumn: 3,
 		spaceBetween: 0,
+		breakpoints: {
+			576: {
+				slidesPerView: 3,
+				slidesPerColumn: 3
+			},
+			768: {
+				slidesPerView: 4,
+				slidesPerColumn: 3
+			}
+		},
 		pagination: {
 			el: '.headerBlock .swiper-pagination',
 			type: 'bullets',
@@ -309,6 +319,10 @@ function eventHandler() {
 			loadPrevNextAmount: 14
 		}
 	}); // modal window
+
+	$('.accardionToggle--js').on('click', function () {
+		$(this).toggleClass('active').parent().find('.accardion_hiddenBlock-js').slideToggle();
+	});
 
 	window.onload = function () {
 		document.body.classList.add('loaded_hiding');

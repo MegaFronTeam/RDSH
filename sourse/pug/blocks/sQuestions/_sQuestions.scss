@@ -1,0 +1,90 @@
+
+// start .sQuestions
+.sQuestions {
+
+	&__accardionButton {
+		position: relative;
+		width: rem(22);
+		margin-left: rem(10);
+
+		&::before, &:after {
+			content: '';
+			@include a-cent;
+			width: rem(22);
+			height: 3px;
+			border-radius: $border-radius;
+			background-color: $cyan;
+			@include mt;
+		}
+
+		&:after {
+			transform: rotate(90deg);
+		}
+	}
+	
+	&__accardion {
+		min-height: rem(100);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #fff;
+		border-radius: $border-radius;
+		padding: rem(20) rem(26) rem(20) rem(20);
+		cursor: pointer;
+
+		&.active .sQuestions__accardionButton{
+			&::before, &::after {
+				background-color: $red;
+			}
+			&::after {
+				transform: none;
+			}
+		}
+	}
+
+	&__item {
+		margin-bottom: rem(30);
+	}
+
+	&__title {
+		@extend .h5;
+		color: $cyan;
+		margin-bottom: 0 !important;
+	}
+
+	&__hiddenBlock {
+		display: none;
+	}
+
+	&__hiddenBlock {
+		background-color: rgba($color: #fff, $alpha: 0.1);
+		padding: rem(40) rem(28) rem(28);
+		margin-top: rem(-20);
+		border-radius: 0 0 $border-radius $border-radius;
+		
+	}
+
+	p {
+		position: relative;
+		border-radius: $border-radius;
+		background-color: rgba($color: #457dff, $alpha: 0.1);
+		padding: rem(19) rem(29) rem(25);
+		// background-image: url('../img/svg/accardion-text-bg.svg');
+		// background-size: contain;
+		// background-position: center;
+		// background-repeat: no-repeat;
+		margin-bottom: 0;
+		max-width: 80%;
+		margin-left: auto;
+
+		a {
+			color: #fff;
+		}
+
+	}
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sQuestions

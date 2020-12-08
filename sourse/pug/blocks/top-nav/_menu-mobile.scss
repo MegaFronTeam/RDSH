@@ -7,7 +7,10 @@ $h: 3px;
 	position: relative;
 	color: #fff;
 	font-size: 32px;
-	width: rem(29);
+	width: rem(20);
+	@include media-breakpoint-up(sm) {
+		width: rem(27);
+	}
 	cursor: pointer;
 
 
@@ -44,7 +47,10 @@ $h: 3px;
 	span:after,
 	span:before {
 		// width: 32px;
-		width: rem(27);
+		width: rem(20);
+		@include media-breakpoint-up(sm) {
+			width: rem(27);
+		}
 		height: $h;
 		background-color: currentColor;
 		transition: all 0.3s;
@@ -90,9 +96,12 @@ $h: 3px;
 	will-change: transform;
 
 	&__inner {
-		background-color: rgba($color: #000000, $alpha: 0.6);
-		border-radius: rem(20) 0 0 rem(20);
-		padding: rem(80) 0 rem(100) rem(100);
+		background-color: rgba($color: #000000, $alpha: 0.8);
+		@include media-breakpoint-up(md) {
+			border-radius: rem(20) 0 0 rem(20);
+			padding: rem(80) rem(50) rem(100) rem(100);
+		}
+		padding: rem(30);
 		width: 100%;
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -135,6 +144,46 @@ $h: 3px;
 		}
 	}
 
+	&__search {
+		position: relative;
+		margin-bottom: rem(20);
+		margin-top: rem(20);
+	}
+
+	&__btnSearch {
+		border: none;
+		background-color: rgba($color: #fff, $alpha: 0.15);
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		display: grid;
+		place-items: center;
+		@include a-cent(y);
+		right: rem(10px);
+		
+		.icon {
+			font-size: rem(20);
+			color: #fff;
+		}
+	}
+
+	&__radioBtn {
+		background-color: rgba($color: #fff, $alpha: 0.2);
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		border: none;
+		padding: rem(10);
+		display: grid;
+		place-items: center;
+		margin-left: rem(20);
+
+		.icon {
+			color: #fff;
+			font-size: rem(23);
+		}
+	}
+
 	&.active {
 		transform: translate(0, 0);
 
@@ -152,7 +201,10 @@ $h: 3px;
 		left: 0;
 		right: auto;
 		color: #FFF;
-		top: 65px;
+		top: 40px;
+		@include media-breakpoint-up(lg) {
+			top: 65px;
+		}
 		z-index: 9999;
 		background-color: transparent;
 		opacity: 1 !important;

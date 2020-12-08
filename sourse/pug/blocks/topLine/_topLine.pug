@@ -3,10 +3,10 @@ mixin topLine()
 	+b.topLine#topLine&attributes(attributes)
 		.container
 			+e.inner
-				.row.justify-content-between
+				.row.justify-content-between.align-items-center
 					.col-auto
 						+e.logo(href="/")
-							img(src="img/svg/logo.svg", alt="")
+							img.res-i(src="img/svg/logo.svg", alt="")
 					.col-auto
 						+e.row.row.align-items-center
 							+e.col.col-auto.d-none.d-lg-flex
@@ -22,7 +22,7 @@ mixin topLine()
 							.col-auto
 								+e.user(href="#")
 									+icon('user')
-									span Вход
+									span.d-none.d-md-inline Вход
 							.col-auto
 								+e.mnu
 									+mob-mnu()

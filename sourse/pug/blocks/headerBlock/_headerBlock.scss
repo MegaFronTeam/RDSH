@@ -1,9 +1,6 @@
 // start .headerBlock
 .headerBlock {
-	padding-top: rem(20);
-	@include media-breakpoint-up(lg) {
-		padding-top: rem(45);
-	}
+	padding-top: 0;
 	padding-bottom: rem(30);
 	&__block {
 		@extend .bg-w;
@@ -59,24 +56,32 @@
 
 .calendarBlock {
 	@extend .bg-w;
-	padding: rem(16);
+	padding: rem(5);
+	@include media-breakpoint-up(sm) {
+		padding: rem(16);
+	}
 
 	.row {
-		@include roww(40px);
+		@include roww(20px);
+		@include media-breakpoint-up(xxl) {
+			@include roww(40px);
+		}
 	}
 
 	&__calendar {
 		background-color: #fff;
 		border-radius: $border-radius;
-		padding: rem(17) rem(29) rem(17) rem(22);
-		position: relative;
-		max-width: 157px;
-
-
-		&::before {
-			content: '';
-			position: absolute;
-
+		padding: rem(10);
+		max-width: 120px;
+		@include media-breakpoint-up(sm) {
+			padding: rem(17);
+			max-width: 157px;
+		}
+		@include media-breakpoint-up(xxl) {
+			padding: rem(17) rem(29) rem(17) rem(22);
+		}
+		@include media-breakpoint-only(lg) {
+			margin-bottom: rem(20);
 		}
 	}
 
@@ -87,21 +92,47 @@
 
 	&__month {
 		margin-left: 5%;
+		@include media-breakpoint-down(sm) {
+			font-size: $small;
+		}
 	}
 
 	&__descr {
 		line-height: 1.3;
+		position: relative;
+
+		&::before {
+			@include media-breakpoint-up(xl) {
+				content: '';
+				@include a-cent(y);
+				left: rem(-10);
+				height: 100%;
+				width: 2px;
+				background-color: rgba($color: #fff, $alpha: 0.2);
+			}
+			@include media-breakpoint-up(xxl) {
+				left: rem(-20);
+			}
+		}
 	}
 
 	&__wrap {
 		display: flex;
 		align-items: flex-end;
-		justify-content: space-between;
+		@include media-breakpoint-up(xxl) {
+			justify-content: space-between;
+		}
 		color: #293377;
 	}
 
 	&__number {
-		font-size: $h1-font-size;
+		font-size: rem(25);
+		@include media-breakpoint-up(sm) {
+			font-size: rem(30);
+		}
+		@include media-breakpoint-up(xxl) {
+			font-size: $h1-font-size;
+		}
 		line-height: 1;
 
 	}
@@ -123,6 +154,9 @@
 		margin-bottom: rem(30);
 	}
 	text-decoration: none !important;
+	&:hover {
+		transform: translateY(-10px);
+	}
 
 	.picture-bg {
 		img {
@@ -173,7 +207,10 @@
 	@include media-breakpoint-up(lg) {
 		margin-top: rem(-32);
 	}
-	max-height: rem(695);
+	max-height: rem(600);
+	@include media-breakpoint-up(md) {
+		max-height: rem(695);
+	}
 	height: 100%;
 	width: 100%;
 
@@ -241,7 +278,7 @@
 	flex-wrap: wrap;
 	justify-content: flex-end;
 	margin: rem(20) rem(55) 0;
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(xxl){
 		margin: rem(-67) rem(55) 0;
 	}
 
