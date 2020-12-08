@@ -1,0 +1,30 @@
+mixin topLine()
+	// start topLine
+	+b.topLine#topLine&attributes(attributes)
+		.container
+			+e.inner
+				.row.justify-content-between
+					.col-auto
+						+e.logo(href="/")
+							img(src="img/svg/logo.svg", alt="")
+					.col-auto
+						+e.row.row.align-items-center
+							+e.col.col-auto.d-none.d-lg-flex
+								+e.audio-wrap
+									<audio class="audio-js" src="http://demo9.w-brick.ru/source/Pruefungen/A1/Modellsatz_1/Hoeren/Hoeren_1.mp3" controls="controls"></audio>
+								+e.radioBtn(type="button")
+									+icon('radio')
+							.col-auto.d-none.d-lg-block
+								+e.search
+									+input('Поиск на сайте…','search')
+									+e.btnSearch(type="submit")
+										+icon('search')
+							.col-auto
+								+e.user(href="#")
+									+icon('user')
+									span Вход
+							.col-auto
+								+e.mnu
+									+mob-mnu()
+
+	// end topLine

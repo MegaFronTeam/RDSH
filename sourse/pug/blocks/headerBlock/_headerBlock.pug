@@ -1,0 +1,76 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.container
+			+e.row.row
+				+e.bannerCol.col-lg
+					+e.block
+						+e.txtSm Будь в самом большом детском движении России
+						h4 Нас более 800 000 человек!
+					+b.linkBlock(href="#")
+						+pic('banner-1.jpg','bg','')(class="picture-bg")
+					+b.linkBlock--whithTxt(href="#")
+						+pic('banner-2.jpg','bg','')(class="picture-bg")
+						+e.block
+							+e.text
+								+e.subtitle Всероссийский конкурс
+								h4 Викторина победы
+							+e.iconArrow
+								+icon('arrow-forward')
+					+b.calendarBlock
+						.row.align-items-center
+							.col-auto
+								+e.calendar
+									+e.day Пятница
+									+e.wrap
+										+e.number 22
+										+e.month Ноября
+							.col
+								+e.descr На&nbsp;киберлиге РДШ уже 3000&nbsp;участников
+
+
+				+e.sliderCol.col-lg-8
+					+b.mainSlider
+						+e.slider--js.swiper-container
+							.swiper-wrapper
+								mixin slide(i,t)
+									+e.slide.swiper-slide
+										+e.item(href='#')
+											+e.logo
+												img.swiper-lazy.res-i(src="#" data-src=`img/svg/category-${i}.svg`, alt="")
+											h6= t
+								+slide('1','Проекты')
+								+slide('5','Об РДШ')
+								+slide('9','Спорт РДШ')
+								+slide('2','Направления')
+								+slide('6','Школы')
+								+slide('10','Корпоративный Университет')
+								+slide('3','Мероприятия')
+								+slide('7','Календарь')
+								+slide('11','Классное Радио')
+								+slide('4','Новости')
+								+slide('8','Контакты')
+
+								+slide('1','Проекты')
+								+slide('2','Направления')
+								+slide('3','Мероприятия')
+								+slide('4','Новости')
+								+slide('5','Об РДШ')
+								+slide('6','Школы')
+								//- +slide('7','Календарь')
+								//- +slide('8','Контакты')
+								//- +slide('9','Спорт РДШ')
+								//- +slide('10','Корпоративный Университет')
+								//- +slide('11','Классное Радио')
+								
+						.text-center
+							.swiper-pagination
+					+e.foot
+						+soc()
+					+b.theme
+						+e.text Фон на сайте:
+						+e.item.active(href="#" style="background-image: linear-gradient(to bottom, #5b6ceb 0%, #7bc2ff 100%);")
+						+e.item(href="#")
+						+e.item(href="#")
+
+	// end headerBlock

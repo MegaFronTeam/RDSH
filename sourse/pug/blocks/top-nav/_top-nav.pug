@@ -1,0 +1,71 @@
+mixin mob-mnu()
+	-
+		//- let path = require('path');
+		//- let fs = require('fs');
+		//- var requestURL = 'top-nav.json';
+		//- var request = new XMLHttpRequest();
+		//- request.open('GET', requestURL);
+		//- request.responseType = 'json';
+		//- let dataJson = JSON.parse(json);
+	//- h1= dataJson['lala'] 
+	+b.toggle-menu-mobile--js
+		span
+	+b.menu-mobile--js
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+		
+			.d-flex.d-lg-none.align-items-center
+				+e.audio-wrap
+					<audio class="audio-js" src="http://demo9.w-brick.ru/source/Pruefungen/A1/Modellsatz_1/Hoeren/Hoeren_1.mp3" controls="controls"></audio>
+				+e.radioBtn(type="button")
+					+icon('radio')
+			.d-lg-none
+				+e.search
+					+input('Поиск на сайте…','search')
+					+e.btnSearch(type="submit")
+						+icon('search')
+			.h3 Об РДШ
+			+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") О движении
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Структура
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Координационный совет
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Региональные отделения
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Контакты
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Документы
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Вопросы и ответы
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Первичные отделения
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Местные отделения
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Новости
+			.h3 Деятельность
+			+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Направления
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Мероприятия
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Проекты
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Календарь
+
+			.h3 Информационные ресурсы
+			+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Спорт РДШ
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Корпоративный Университет
+				+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Классное радио
+			.h3 Обратная связь
+			+e.sm Почтовый адрес и приём курьерской корреспонденции:
+			p 119048, Москва, ул. Усачева, д.64, подъезд 4
+			+e.row
+				+e.mailWrap
+					+e.sm Электронная почта:
+					+e.mail(href='mailto:directorate-skm@yandex.ru') directorate-skm@yandex.ru
+				+e.phoneWrap
+					+e.sm Рабочий номер телефона:
+					+e.phone(href="tel:+74996730200") +7 499 673-02-00
+
+			.text-right
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			+mnu()
+					
+	// end top-nav

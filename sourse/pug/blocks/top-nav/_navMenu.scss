@@ -1,0 +1,30 @@
+.navMenu{
+	// display: flex;
+	// list-style: none;
+	@include roww(20px);
+	position: relative;
+	margin-bottom: 0;
+	max-width: 100%;
+	flex-wrap: wrap;
+	@include media-breakpoint-up(md) {
+		columns: 2;
+	}
+	margin-bottom: rem(40);
+
+	&__item {
+		// padding-left: 0;
+		// padding-right: 0;
+	}
+	&__link{
+		display: inline-block;
+		// text-align: center;
+		padding: rem(10) rem(0);
+		color: #fff !important;
+		position: relative;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

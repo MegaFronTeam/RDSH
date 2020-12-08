@@ -1,0 +1,155 @@
+// start .topLine
+.topLine {
+
+	&__inner {
+		padding: rem(25px) rem(30px) rem(24px);
+		border-radius: rem(30px);
+		background-color: rgba($color: #fff, $alpha: 0.05);
+	}
+
+	&__user {
+		display: block;
+		border-radius: $border-radius;
+		background-color: rgba($color: #fff, $alpha: 0.12);
+		text-decoration: none !important;
+		color: #fff;
+		padding: rem(10) rem(20);
+		@include media-breakpoint-only(lg) {
+			padding: rem(10);
+		}
+
+		.icon {
+			font-size: rem(21);
+			margin-right: rem(12);
+		}
+	}
+
+	.row {
+		@include roww(10px);
+		@include media-breakpoint-up(xxl) {
+			@include roww(20px);
+
+		}
+	}
+
+	&__search {
+		position: relative;
+	}
+
+	&__input {
+		@include media-breakpoint-up(xxl) {
+			min-width: rem(357);
+		}
+	}
+
+	&__btnSearch {
+		border: none;
+		background-color: rgba($color: #fff, $alpha: 0.15);
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		display: grid;
+		place-items: center;
+		@include a-cent(y);
+		right: rem(10px);
+		
+		.icon {
+			font-size: rem(20);
+			color: #fff;
+		}
+	}
+
+	&__mnu {
+		width: 56px;
+		height: 56px;
+		background-color: rgba($color: #fff, $alpha: 0.13);
+		border-radius: 50%;
+		display: grid;
+		place-items: center;
+	}
+
+	&__col {
+		align-items: center;
+	}
+
+	&__radioBtn {
+		background-color: rgba($color: #fff, $alpha: 0.2);
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		border: none;
+		padding: rem(10);
+		display: grid;
+		place-items: center;
+		margin-left: rem(20);
+
+		.icon {
+			color: #fff;
+			font-size: rem(23);
+		}
+	}
+
+	.toggle-menu-mobile {
+		&.on {
+			opacity: 0;
+		}
+	}
+
+	&__input {
+		@include media-breakpoint-only(lg) {
+			padding: .67rem .6rem;
+		}
+	}
+
+	
+
+	@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.topLine
+
+.plyr {
+	--plyr-color-main: #fff;
+	max-width: 140px;
+	@include media-breakpoint-up(xl) {
+		max-width: 220px;
+	}
+	min-width: 100%;
+	&__controls {
+		background: rgba($color: $body-color, $alpha: 0.1) !important;
+		border-radius: rem(30) !important;
+
+		svg {
+			color: #fff;
+		}
+	}
+
+	&__control {
+		border-radius: 50%;
+		&:hover {
+			background: rgba($color: #fff, $alpha: 0.25) !important;
+		}
+	}
+
+	&__time, &__progress, &__control[data-plyr="settings"], &__progress__container {
+		display: none;
+	}
+
+	&__volume {
+		flex-direction: row-reverse;
+		@include media-breakpoint-up(xxl) {
+			max-width: rem(180);
+		}
+		width: 100%;
+	}
+
+	#plyr-volume-8684 {
+		width: 112px;
+	}
+
+	input[type=range] {
+		// color: #fff;
+	}
+}
