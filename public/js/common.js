@@ -263,7 +263,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'main.jpg';
+	screenName = '02.jpg';
 
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -329,7 +329,7 @@ function eventHandler() {
 	}); // modal window
 
 	$('.accardionToggle--js').on('click', function () {
-		$(this).toggleClass('active').parent().find('.accardion_hiddenBlock-js').slideToggle();
+		$(this).toggleClass('active').parent().find('.accardion_hiddenBlock-js').slideToggle(); // $(this).parent().toggleClass('active');
 	});
 
 	window.onload = function () {

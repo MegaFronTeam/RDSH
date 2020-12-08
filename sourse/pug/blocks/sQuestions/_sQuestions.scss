@@ -1,6 +1,17 @@
-
 // start .sQuestions
 .sQuestions {
+	--sPB: 5px;
+	margin-bottom: rem(75);
+
+	.section-title {
+		padding-left: rem(38);
+	}
+
+	.row {
+		@include media-breakpoint-up(xl) {
+			@include roww(40px);
+		}
+	}
 
 	&__accardionButton {
 		position: relative;
@@ -29,56 +40,68 @@
 		justify-content: space-between;
 		background-color: #fff;
 		border-radius: $border-radius;
-		padding: rem(20) rem(26) rem(20) rem(20);
+		padding: rem(10) rem(20) rem(10) rem(10);
+		@include media-breakpoint-up(sm) {
+			padding: rem(20) rem(26) rem(20) rem(20);
+		}
 		cursor: pointer;
 
-		&.active .sQuestions__accardionButton{
-			&::before, &::after {
-				background-color: $red;
-			}
-			&::after {
-				transform: none;
+		&.active {
+
+			.sQuestions__accardionButton {
+				&::before, &::after {
+					background-color: $red;
+				}
+				&::after {
+					transform: none;
+				}
 			}
 		}
 	}
 
 	&__item {
 		margin-bottom: rem(30);
+
+		&.active {
+			.sQuestions__hiddenBlock {
+				display: block;
+			}
+		}
 	}
 
 	&__title {
 		@extend .h5;
+		line-height: 1.1;
+		letter-spacing: rem(-0.2);
 		color: $cyan;
 		margin-bottom: 0 !important;
 	}
-
-	&__hiddenBlock {
-		display: none;
-	}
-
-	&__hiddenBlock {
-		background-color: rgba($color: #fff, $alpha: 0.1);
-		padding: rem(40) rem(28) rem(28);
-		margin-top: rem(-20);
-		border-radius: 0 0 $border-radius $border-radius;
-		
-	}
-
+	
 	p {
 		position: relative;
 		border-radius: $border-radius;
 		background-color: rgba($color: #457dff, $alpha: 0.1);
-		padding: rem(19) rem(29) rem(25);
+		padding: rem(10);
+		@include media-breakpoint-up(sm) {
+			padding: rem(19) rem(27) rem(25) rem(29);
+		}
 		// background-image: url('../img/svg/accardion-text-bg.svg');
 		// background-size: contain;
 		// background-position: center;
 		// background-repeat: no-repeat;
 		margin-bottom: 0;
-		max-width: 80%;
+		@include media-breakpoint-up(md) {
+			max-width: 91.5%;
+		}
 		margin-left: auto;
+		line-height: 1.35;
+		letter-spacing: rem(0.11);
 
 		a {
 			color: #fff;
+			&:hover {
+				text-decoration: none;
+			}
 		}
 
 		&::before {
@@ -94,7 +117,27 @@
 			transform: rotate(-135deg);
 			
 		}
+	}
 
+
+	&__hiddenBlock {
+		background-color: rgba($color: #fff, $alpha: 0.1);
+		padding: rem(30) rem(14) rem(14);
+
+		@include media-breakpoint-up(md) {
+			padding: rem(40) rem(28) rem(28);
+		}
+		margin-top: rem(-20);
+		border-radius: 0 0 $border-radius $border-radius;
+		display: none;
+
+		&--sm {
+			p {
+				@include media-breakpoint-up(md) {
+					max-width: 69%;
+				}
+			}
+		}
 	}
 
 	@include media-breakpoint-up(sm) {}
