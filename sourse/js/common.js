@@ -231,8 +231,6 @@ const JSCCommon = {
 			speed:
 				{ selected: 1,
 					options: [0.75, 1, 1.25, 1.5],
-					// hideControls: true,
-					// controls: ['play','mute'],
 				}
 			,
 		}));
@@ -254,7 +252,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '02.jpg';
+	screenName = '03.jpg';
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}

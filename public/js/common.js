@@ -238,9 +238,7 @@ var JSCCommon = {
 			return new Plyr(p, {
 				speed: {
 					selected: 1,
-					options: [0.75, 1, 1.25, 1.5] // hideControls: true,
-					// controls: ['play','mute'],
-
+					options: [0.75, 1, 1.25, 1.5]
 				}
 			});
 		});
@@ -263,7 +261,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '02.jpg';
+	screenName = '03.jpg';
 
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));

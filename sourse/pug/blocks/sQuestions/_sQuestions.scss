@@ -4,7 +4,10 @@
 	margin-bottom: rem(75);
 
 	.section-title {
-		padding-left: rem(38);
+		padding-left: rem(5);
+		@include media-breakpoint-up(md) {
+			padding-left: rem(38);
+		}
 	}
 
 	.row {
