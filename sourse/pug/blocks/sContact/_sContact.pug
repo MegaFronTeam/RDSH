@@ -6,5 +6,61 @@ mixin sContact()
 				+b.section-title
 					h1 Контакты
 					
-				.row
+				.tabs
+					.tabs__caption
+						.tabs__btn Центральный аппарат
+						.tabs__btn.active Руководители и отделы
+					.tabs__wrap
+						.tabs__content.tabs__content--sm
+							+e.row.row
+								.col-lg-6
+								+e.col.col-lg-6
+									+personBlock('2',`Чурикова Яна Алексеевна`,`Сопредседатель РДШ, российский журналист, телеведущая, директор «МТV Россия»`)(class="bg-transparent")
+								.col-lg-6.align-self-end
+									+e.subtitle
+										h4 Главное здание
+									+e.block
+										h6 119048, Москва, ул.Усачева, д.64, подъезд 4
+										+e.sm Метро Спортивная<br> Понедельник - пятница: 9.00-18.00
+								.col-lg-6
+									+e.subtitle
+										h4 Почтовый адрес и приём курьерской корреспонденции
+									+e.block
+										h6 119048, Москва, ул.Усачева, д.64, подъезд 4
+										+e.sm Электронная почта: #[a(href="mailto:directorate-skm@yandex.ru") directorate-skm@yandex.ru]<br>Официальный сайт: #[a(href="#") рдш.рф]
+						.tabs__content.active
+							+e.row.row
+								.col-lg-6.order-lg-1
+									+e.subtitle
+										h4 Общероссийская общественно-государственная детско&#8209;юношеская организация &laquo;Российское движение школьников&raquo;
+								.col-lg-6.order-lg-3
+									+personBlock('2-1',`Плещева Ирина Владимировна`).--contacts
+										p Исполнительный директор<br> E-mail: #[a(href="mailto:IPlesheva@myrdsh.ru") IPlesheva@myrdsh.ru]
+									+personBlock('2-2',`Киреченков Геннадий Анатольевич`).--contacts
+										p Заместитель исполнительного директора по методическому обеспечению<br> E-mail: #[a(href="mailto:ESamsonova@myrdsh.ru") ESamsonova@myrdsh.ru]
+									+personBlock('2-3',`Самсонова Екатерина Сергеевна`).--contacts
+										p Заместитель исполнительного директора по маркетингу<br> E-mail: #[a(href="mailto:ESamsonova@myrdsh.ru") ESamsonova@myrdsh.ru]
+
+
+								.col-lg-6.order-lg-2.align-self-end
+									+e.subtitle
+										h4 ФГБУ &laquo;Российский детско-юношеский центр&raquo;
+								.col-lg-6.order-lg-4
+									+personBlock('2-4',`Кудряшов Александр Сергеевич`).--contacts
+										p Директор<br> E-mail: #[a(href="mailto:AKudryashov@myrdsh.ru") AKudryashov@myrdsh.ru]
+									+personBlock('2-5',`Толкачева Дарья Геннадьевна`).--contacts
+										p Заместитель директора по региональному взаимодействию<br> E-mail: #[a(href="mailto:pronina.d.g@rdcentr.ru") pronina.d.g@rdcentr.ru]
+									+personBlock('2-6',`Мокшина Марина Александровна`).--contacts
+										p Заместитель директора по общим вопросам<br> E-mail: #[a(href="mailto:MMokshina@myrdsh.ru") MMokshina@myrdsh.ru]
+									+personBlock('2-7',`Носиков Евгений Сергеевич`).--contacts
+										p Заместитель директора по информационной политике и реализации проектов<br> E-mail: #[a(href="mailto:Nosikov.e.s@rdcentr.ru") Nosikov.e.s@rdcentr.ru]
+							.text-center.pt-2
+								h4 Военно-патриотическое направление
+							.row
+								.col-lg-6
+									+personBlock('2-8',`Гарафутдинова Динара Талгатовна`).--contacts
+										p Руководитель отдела реализации проектов и программ в сфере военно-патриотеского воспитания<br> E-mail: #[a(href="mailto:garafutdinova.d.t@rdcentr.ru") garafutdinova.d.t@rdcentr.ru]
+								.col-lg-6
+									+personBlock('2-9',`Клепикова Евгения Сергеевна`).--contacts
+										p Руководитель отдела реализации проектов и программ в сфере краеведения<br> E-mail: #[a(href="mailto:mazaev.p@myrdsh.ru") mazaev.p@myrdsh.ru]
 	// end sContact

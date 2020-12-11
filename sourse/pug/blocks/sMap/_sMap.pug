@@ -1,0 +1,180 @@
+mixin sMap(data)
+	// start sMap
+	+b.SECTION.sMap.section#sMap&attributes(attributes)
+		.container
+			.section__inner
+				+b.section-title.text-center
+					h1 Региональные отделения
+					
+				+e.map
+					+pic('map.png')
+				.row
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter А
+							ul
+								li: a(href="#") Алтайский край
+								li: a(href="#") Архангельская обл.
+								li: a(href="#") Астраханская обл.
+								li: a(href="#") Амурская обл.
+								li: a(href="#") Алтай
+								li: a(href="#") Адыгея
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter Б
+							ul
+								li: a(href="#") Белгородская обл.
+								li: a(href="#") Брянская обл.
+								li: a(href="#") Башкортостан
+								li: a(href="#") Бурятия
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter В
+							ul
+								li: a(href="#") Владимирская обл.
+								li: a(href="#") Воронежская обл.
+								li: a(href="#") Волгоградская обл.
+								li: a(href="#") Вологодская обл.
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter Д
+							ul
+								li: a(href="#") Дагестан
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter Е
+							ul
+								li: a(href="#") Еврейская АО
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter З
+							ul
+								li: a(href="#") Забайкальский край
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter И
+							ul
+								li: a(href="#") Ивановская обл.
+								li: a(href="#") Иркутская обл.
+								li: a(href="#") Ингушетия
+
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter К
+							ul
+								li: a(href="#") Кабардино-Балкария
+								li: a(href="#") Калужская обл.
+								li: a(href="#") Камчатский край
+								li: a(href="#") Калининградская обл.
+								li: a(href="#") Калмыкия
+								li: a(href="#") Карачаево-Черкесия
+								li: a(href="#") Курганская обл.
+								li: a(href="#") Карелия
+								li: a(href="#") Краснодарский край
+								li: a(href="#") Курская обл.
+								li: a(href="#") Красноярский край
+								li: a(href="#") Кировская обл.
+								li: a(href="#") Костромская обл.
+								li: a(href="#") Коми
+								li: a(href="#") Крым
+								li: a(href="#") Кемеровская обл.
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter Л
+							ul
+								li: a(href="#") Липецкая обл.
+								li: a(href="#") Ленинградская обл.
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter М
+							ul
+								li: a(href="#") Мордовия
+								li: a(href="#") Марий Эл
+								li: a(href="#") Москва
+								li: a(href="#") Мурманская обл.
+								li: a(href="#") Магаданская обл.
+								li: a(href="#") Московская обл.
+
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter Н
+							ul
+								li: a(href="#") Ненецкий АО
+								li: a(href="#") Новосибирская обл.
+								li: a(href="#") Новгородская обл.
+								li: a(href="#") Нижегородская обл.
+
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter О
+							ul
+								li: a(href="#") Оренбургская обл.
+								li: a(href="#") Омская обл.
+								li: a(href="#") Орловская обл.
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter П
+							ul
+								li: a(href="#") Пензенская обл.
+								li: a(href="#") Пермский край
+								li: a(href="#") Приморский край
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter Р
+							ul
+								li: a(href="#") Ростовская обл.
+								li: a(href="#") Рязанская обл.
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter С
+							ul
+								li: a(href="#") Ставропольский край
+								li: a(href="#") Саратовская обл.
+								li: a(href="#") Свердловская обл.
+								li: a(href="#") Санкт-Петербург
+								li: a(href="#") Севастополь
+								li: a(href="#") Смоленская обл.
+								li: a(href="#") Сахалинская обл.
+								li: a(href="#") Северная Осетия-Алания
+								li: a(href="#") Самарская обл.
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter Т
+							ul
+								li: a(href="#") Тюменская обл.
+								li: a(href="#") Тамбовская обл.
+								li: a(href="#") Тверская обл.
+								li: a(href="#") Тыва
+								li: a(href="#") Татарстан
+								li: a(href="#") Тульская обл.
+								li: a(href="#") Томская обл.
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter У
+							ul
+								li: a(href="#") Удмуртия
+								li: a(href="#") Ульяновская обл.
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter Х
+							ul
+								li: a(href="#") Хакасия
+								li: a(href="#") ХМАО — Югра
+								li: a(href="#") Хабаровский край
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter Ч
+							ul
+								li: a(href="#") Чечня
+								li: a(href="#") Чукотский АО
+								li: a(href="#") Челябинская обл.
+								li: a(href="#") Чувашия
+					+e.col.col-sm-6.col-md-4.col-lg-3.col-xxl-12
+						+e.listWrap
+							+e.letter Я
+							ul
+								li: a(href="#") Ярославская обл.
+								li: a(href="#") Ямало-Ненецкий АО
+								li: a(href="#") Якутия
+
+	// end sMap

@@ -1,0 +1,62 @@
+
+// start .sMap
+.sMap {
+	
+
+	&__map {
+		display: grid;
+		place-items: center;
+		padding-top: rem(40);
+		padding-bottom: rem(40);
+		background-color: rgba($color: #fff, $alpha: 0.15);
+		margin-bottom: rem(43);
+		border-radius: $border-radius;
+	}
+
+	.row {
+		@include roww(35px);
+	}
+
+	&__listWrap {
+		@extend .bg-w;
+		padding: rem(29) rem(15) rem(10);
+		@include media-breakpoint-up(xxxl) {
+			padding: rem(29) rem(30) rem(10);
+		}
+	}
+
+	&__letter {
+		font-size: $h2-font-size;
+		font-weight: 500;
+		margin-bottom: rem(35);
+	}
+
+	ul {
+		li {
+			list-style: none;
+			line-height: 1.2;
+			padding-bottom: rem(7);
+		}
+
+		a {
+			color: #fff;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__col {
+		@include media-breakpoint-up(xxl) {
+			width: 20% !important;
+		}
+		margin-bottom: rem(33);
+	}
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sMap

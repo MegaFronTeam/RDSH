@@ -1,0 +1,29 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sMap/_sMap.pug
+
+block variables
+	- let  mainPage= 'bg'
+block title
+	- let  title= 'Региональные отделения'
+	title= title
+block pagecontent
+
+	.main-wrapper()
+		style.
+			.bg {
+				
+				background: linear-gradient(-240.64deg, #5b6ceb 0%, #7bc2ff 100%);
+			}
+		+header()
+			+topLine()
+		+sMap()
+	//- +sForm()
+	//- +sContact()
+	//- +footer()
+
+
+	

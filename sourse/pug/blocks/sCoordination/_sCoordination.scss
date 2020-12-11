@@ -51,14 +51,9 @@
 		padding: rem(15) rem(30) rem(15) rem(15);
 	}
 	color: #fff !important;
-	text-decoration: none !important;
 	display: block;
 	height: calc(100% - #{rem(15)});
 	margin-bottom: rem(15);
-
-	&:hover {
-		transform: translateY(-10px);
-	}
 
 	picture {
 		overflow: hidden;
@@ -113,5 +108,54 @@
 		// line-height: ca;
 		font-size: $small;
 		margin-bottom: .2rem;
+
+		a {
+			color: #fff;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&.bg-transparent {
+		background-color: transparent;
+	}
+
+	&--contacts {
+		min-height: rem(155);
+		height: auto !important;
+		@include media-breakpoint-up(md) {
+			padding-top: rem(15);
+		}
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(20);
+		}
+
+		picture {
+			@include media-breakpoint-up(md) {
+				min-width: rem(112);
+				margin-top: rem(7);
+			}
+		}
+
+		.personBlock__row {
+			@include roww(15px);
+			@include media-breakpoint-up(md) {
+				@include roww(20px);
+			}
+		}
+
+		.personBlock__name {
+			margin-bottom: .8rem;
+		}
+	}
+}
+
+a.personBlock {
+	text-decoration: none !important;
+
+	&:hover {
+		transform: translateY(-10px);
 	}
 }
