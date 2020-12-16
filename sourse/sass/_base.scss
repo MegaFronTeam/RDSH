@@ -7,7 +7,7 @@
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-position: center 0px;
+	background-position: center 49px;
 	opacity: 0;
 	// opacity: 0.7;
 }
@@ -437,4 +437,42 @@ iframe {
 	/* Цвет текста */
 	background: $primary;
 	/* Цвет фона */
+}
+
+.btn-success {
+	background-image: linear-gradient(to right, #78d062 0%, #36b754 100%);
+	border: none;
+	letter-spacing: rem(0.2);
+	
+	padding: rem(8);
+	font-size: rem(14);
+	@include media-breakpoint-up(xxl) {
+		font-size: $small;
+		padding: rem(8) rem(16);
+	}
+
+	@include media-breakpoint-up(lg) {
+		@include mt;
+		&:hover {
+			transform: rotate(-1deg) translateY(-2px);
+		}
+	}
+}
+
+.bg-filter {
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+	
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		background: rgba($color: #000, $alpha: 0.5);
+		backdrop-filter: blur(5px);
+	}
 }

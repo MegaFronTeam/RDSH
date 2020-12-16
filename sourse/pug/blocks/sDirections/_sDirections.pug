@@ -1,0 +1,100 @@
+mixin sDirections(data)
+	// start sDirections
+	+b.SECTION.sDirections.section#sDirections&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Направления
+			+e.row.row
+				+directionsItem('1','Гражданская активность',`Добровольчество, поисковая деятельность, изучение истории России, краеведение, создание и&nbsp;развитие школьных музеев, экология`)
+					+subdirectionsItem('1','Добровольчество')
+					+subdirectionsItem('2','Поисковая деятельность')
+					+subdirectionsItem('3','Экология')
+				+directionsItem('2','Личностное развитие',`Творческое развитие, популяризация здорового образа жизни и&nbsp;спорта, выбор будущей профессии`)
+					+subdirectionsItem('4','Творческое развитие')
+					+subdirectionsItem('5','Спорт')
+					+subdirectionsItem('6','Популяризация профессий')
+				+directionsItem('3','Информационно-медийное',`Большая детская редакция, создание школьных газет, радио и&nbsp;телевидение, работа с&nbsp;социальными сетями, подготовка информационного контента, дискуссионные площадки`)
+					+subdirectionsItem('7',`Междисциплинарные проекты и&nbsp;программы`)
+					+subdirectionsItem('8','Медиа')
+				+directionsItem('4','Военно-патриотическое',`Юные армейцы, юные спасатели, юные казаки, юные пограничники, юные друзья полиции, юные инспектора движения`)
+					+subdirectionsItem('9','Краеведение')
+					+subdirectionsItem('10','Патриотика')
+			
+					
+	// end sDirections
+
+mixin directionsItem(i,title,text,g)
+	if g
+		+b.directionsItem--inner
+			+e.main
+				.row
+					+e.col.col-3.col-sm-auto
+						img.res-i(src=`img/svg/direction-${i}.svg`, alt="" loading="lazy")
+					.col
+						h1= title
+						+e.subtitle!= text
+	else
+		.col-lg-6
+			+b.directionsItem(href="#")
+				+e.main
+					.row
+						+e.col.col-2.col-sm-auto
+							img.res-i(src=`img/svg/direction-${i}.svg`, alt="" loading="lazy")
+						.col
+							h4= title
+							+e.subtitle!= text
+				+e.subdirections Поднаправления
+				+b.subdirections
+					.row.align-items-center
+						block
+
+
+mixin subdirectionsItem(i,t,list)
+	if list
+		+e.item
+			+e.row.row.align-items-center
+				.col-auto
+					img.res-i(src=`img/svg/subdirections-${i}.svg`, alt="" loading="lazy")
+				.col
+					+e.text!= t
+			block
+	else
+		.col-sm-6
+			+e.item
+				+e.row.row.align-items-center
+					.col-2.col-sm-3
+						img.res-i(src=`img/svg/subdirections-${i}.svg`, alt="" loading="lazy")
+					.col
+						+e.text!= t
+			
+
+
+mixin sDirections-inner(data)
+	// start sDirections
+	+b.SECTION.sDirections--inner.section#sDirections&attributes(attributes)
+		.container
+			.section__inner
+				+directionsItem('2','Личностное развитие',`Творческое развитие, популяризация здорового образа жизни и&nbsp;спорта, выбор будущей профессии`,'g')
+				+b.subdirections--inner
+					+subdirectionsItem('4','Творческое развитие','list')
+						ul
+							li Организация творческих событий&nbsp;&mdash; фестивалей и&nbsp;конкурсов, акций и&nbsp;флешмобов;
+							li Поддержка детских творческих проектов и&nbsp;продвижение детских коллективов;
+							li Реализация культурно-образовательных программ - интерактивных игр, семинаров, мастер-классов, открытых лекториев, встреч с интересными людьми; организация киноклубов;
+							li Проведение культурно-досуговых программ - посещение музеев, театров, концертов; организация экскурсий;
+				+b.subdirections--inner
+					+subdirectionsItem('5','Популяризация ЗОЖ среди школьников','list')
+						ul
+							li Организация профильных событий&nbsp;&mdash; фестивалей, конкурсов, соревнований, акций и&nbsp;флешмобов;
+							li Организация туристических походов и&nbsp;слетов;
+							li Организация мероприятий, направленных на&nbsp;популяризацию комплекса ГТО;
+							li Поддержка работы школьных спортивных секций;
+							li Проведение образовательных программ&nbsp;&mdash; интерактивных игр, семинаров, мастер-классов, открытых лекториев, встреч с&nbsp;интересными людьми;
+							li Проведение образовательных программ по&nbsp;повышению квалификации инструкторского и&nbsp;педагогического состава, а&nbsp;также руководителей общественных организаций.
+				+b.subdirections--inner
+					+subdirectionsItem('6','Популяризация профессий','list')
+						ul
+							li Проведение образовательных мероприятий и&nbsp;программ, направленных на&nbsp;определение будущей профессии&nbsp;&mdash; интерактивных игр, семинаров, мастер-классов, открытых лекториев, встреч с&nbsp;интересными людьми;
+							li Популяризация научно-изобретательской деятельности;
+							li Поддержка и&nbsp;развитие детских проектов;
+							li Организация профильных событий&nbsp;&mdash; фестивалей, конкурсов, олимпиад, акций, флешмобов. Проведение образовательных программ по&nbsp;повышению квалификации инструкторского и&nbsp;педагогического состава, а&nbsp;также руководителей общественных организаций.

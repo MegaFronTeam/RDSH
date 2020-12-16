@@ -1,0 +1,45 @@
+mixin sProjects(data)
+	// start sProjects
+	+b.SECTION.sProjects.section#sProjects&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Последние проекты направления
+				
+			+e.row.row
+				.col-md-6.col-xl-4
+					+projectItem('1','15.05 – 25.10','background-color: #ff9451','Всероссийская киберспортивная школьная лига')
+				.col-md-6.col-xl-4
+					+projectItem('2','21.07.2018','background-color: #ff9451','Творческая мастерская РДШ','ar')
+				.col-md-6.col-xl-4
+					+projectItem('3','24.02 – 12.08','background-color: #ff9451','Всероссийский проект «Информационная культура и безопасность», 2020-2021 год')
+				.col-md-6.col-xl-4
+					+projectItem('4','24.02 – 12.08','background-color: #ff9451','Всероссийский проект «Информационная культура и безопасность», 2020-2021 год')
+				.col-md-6.col-xl-4
+					+projectItem('5','21.07 – 18.08','background-color: #ff9451','Творческая лаборатория')
+				.col-md-6.col-xl-4
+					+projectItem('6','24.02 – 12.08','background-color: #ff9451','Фестиваль театрализованных представлений для обучающихся начальных классов')
+	// end sProjects
+
+
+mixin projectItem(i,date,dr,title,ar,sl)
+	+b.projectItem&attributes(attributes)
+		if sl
+			picture.picture-bg
+				source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/project-bg-${i}.webp` type="image/webp")
+				img.swiper-lazy(src="#" data-src=`img/@2x/project-bg-${i}.jpg`, alt="")
+		else
+			+pic(`project-bg-${i}.jpg`,'','')(class="picture-bg")
+		+e.smDescr
+			if ar
+				+e.archive
+					+icon('archive')
+					span Архив
+			+e.date
+				+e.direction(style= dr)
+				span!= date
+		+e.main
+			.row.align-items-center
+				.col-sm
+					+e.title(href="#")!= title
+				+e.col.col
+					+e.btn(href="#") Подать заявку

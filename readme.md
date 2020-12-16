@@ -6,3 +6,5 @@
 1. <https://aleksandr3012.github.io/RDSH/public/04-contacts.html>
 1. <https://aleksandr3012.github.io/RDSH/public/05-personalCard.html>
 1. <https://aleksandr3012.github.io/RDSH/public/06-map.html>
+1. <https://aleksandr3012.github.io/RDSH/public/07-directions.html>
+1. <https://aleksandr3012.github.io/RDSH/public/08-direction-page.html>
