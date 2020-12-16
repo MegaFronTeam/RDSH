@@ -99,6 +99,7 @@
 	&__title {
 		font-size: $small;
 		line-height: calc(20/16);
+		display: block;
 		color: #fff;
 		text-decoration: none !important;
 		&:hover {
