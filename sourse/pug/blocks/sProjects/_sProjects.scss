@@ -385,6 +385,11 @@
 			margin-top: 0;
 			float: none;
 		}
+
+		.form-check-input, .form-check-label {
+			cursor: pointer;
+
+		}
 	}
 
 	&__btn {
