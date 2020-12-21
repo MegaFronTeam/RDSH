@@ -342,7 +342,7 @@ function eventHandler() {
 	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 		return new bootstrap.Popover(popoverTriggerEl, {
 			// template: '<div class="popover" role="tooltip"><div class="popover-arrow"></div><h3 class="popover-header">фывафыафыцва</h3><div class="popover-body"></div><div class="text-center text-primary ttu pb-2">Свободен</div></div>',
-			trigger: 'focus',
+			// trigger: 'hover',
 			placement: 'auto'
 		});
 	});
