@@ -1,0 +1,105 @@
+mixin sProjectInner(data)
+	// start sProjectInner
+	+b.SECTION.sProjectInner.section#sProjectInner&attributes(attributes)
+		.container
+			+e.head
+				+pic('project-bg.jpg','','')(class="picture-bg")
+				.row
+					.col-auto
+						+e.pgojectName Проекты – Всероссийский конкурс “Викторина Победы”
+					.col-auto
+						+e.pgojectCategory
+							+e.color(style="background-color: #fc5454")
+							span Военно-патриотические
+							+e.date 21.07 – 18.08
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Описание
+					.tabs__btn Номинации
+					.tabs__btn Образовательные ресурсы
+					.tabs__btn Задания
+					.tabs__btn Контакты
+				.tabs__wrap
+					+content1
+					+content2
+					+content3
+					+content4
+					+content5
+
+
+
+
+
+
+
+//- Описание
+mixin content1
+	.tabs__content.active
+		.section__inner
+			+b.section-title
+				h2 Всероссийский конкурс “Викторина Победы”
+				
+			.row
+
+
+
+
+//- Номинации
+mixin content2
+	.tabs__content
+		.section__inner
+			+b.section-title
+				h2 Всероссийский конкурс “Викторина Победы”
+				
+			.row
+
+
+
+
+
+//- Образовательные ресурсы
+mixin content3
+	.tabs__content
+		.section__inner
+			+b.section-title
+				h2 Всероссийский конкурс “Викторина Победы”
+				
+			.row
+
+
+
+
+
+
+//- Задания
+mixin content4
+	.tabs__content
+		.section__inner
+			+b.section-title
+				h2 Всероссийский конкурс “Викторина Победы”
+				
+			.row
+
+
+
+
+
+
+
+//- Контакты
+mixin content5
+	.tabs__content
+		.section__inner
+			+b.section-title
+				h2 Всероссийский конкурс “Викторина Победы”
+				
+			.row
+
+
+
+
+
+
+
+
+	// end sProjectInner

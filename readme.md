@@ -8,3 +8,5 @@
 1. <https://aleksandr3012.github.io/RDSH/public/06-map.html>
 1. <https://aleksandr3012.github.io/RDSH/public/07-directions.html>
 1. <https://aleksandr3012.github.io/RDSH/public/08-direction-page.html>
+1. <https://aleksandr3012.github.io/RDSH/public/09-projects.html>
+1. <https://aleksandr3012.github.io/RDSH/public/10-project-page.html>
