@@ -1,10 +1,126 @@
-
 // start .sProjectInner
 .sProjectInner {
 
+	.section__inner {
+		background: rgba($color: #4762d5, $alpha: 0.5);
+		margin-bottom: rem(40);
+	}
+
+	.section-title {
+		background-color: #fff;
+		color: #293377;
+		border-radius: $border-radius;
+		padding: rem(21) rem(30) rem(20);
+		margin-bottom: var(--sTPB);
+
+		h2 {
+			margin-bottom: 0;
+		}
+	}
+
 	&__head {
 		position: relative;
+		z-index: 2;
+		border-radius: rem(35);
+		overflow: hidden;
+		min-height: 360px;
+		padding: rem(23) rem(30);
+		display: flex;
+		flex-direction: column;
+
+		picture {
+			img {
+				width: 100%;
+			}
+		}
+
+		.row {
+			margin-top: auto;
+		}
 	}
+
+	&__date {
+		margin-left: rem(15);
+	}
+
+	&__pgojectCategory {
+		background-color: #fff;
+		border-radius: $border-radius;
+		padding: rem(8) rem(10);
+		display: flex;
+		align-items: center;
+		font-size: $small;
+		font-weight: 500;
+		color: #293377;
+		line-height: 1.25;
+
+	}
+
+	&__color {
+		width: 17px;
+		height: 17px;
+		border-radius: 50%;
+		margin-right: rem(15);
+	}
+
+	&__pgojectName {
+		@extend .bg-filter;
+		font-size: $small;
+		padding: rem(9) rem(18);
+		border-radius: $border-radius;
+
+		a {
+			color: #fff;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&::before, &::after {
+			border-radius: $border-radius;
+		}
+	}
+
+	&__btn {
+		@extend .btn;
+		@extend .btn-success;
+		font-size: $em-base !important;
+		padding: rem(13) rem(29) !important;
+	}
+
+	&__content {
+		ul {
+			padding-left: rem(50);
+		}
+	}
+
+	// tabs start
+	.tabs {
+
+		&__caption {
+			background: rgba($color: #4762d5, $alpha: 0.5);
+			border-radius: 0 0 rem(30) rem(30);
+			padding: rem(61) rem(30) rem(24);
+			margin-top: rem(-35);
+			flex-wrap: wrap;
+		}
+
+		&__btn {
+			width: auto;
+			padding: rem(13) rem(20);
+		}
+
+		&__link {
+			@extend .btn;
+			@extend .btn-success;
+			font-size: $em-base !important;
+			margin-left: auto;
+			padding: rem(13) rem(29) !important;
+		}
+	}// tabs end
+
 	
 
 	@include media-breakpoint-up(sm) {}

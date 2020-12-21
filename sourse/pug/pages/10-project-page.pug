@@ -5,11 +5,12 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sDirections/_sDirections.pug
 include ../blocks/sProjectInner/_sProjectInner.pug
+include ../blocks/sOtherProjects/_sOtherProjects.pug
 
 block variables
 	- let  mainPage= 'bg'
 block title
-	- let  title= 'Личностное развитие'
+	- let  title= 'Всероссийский конкурс “Викторина Победы”'
 	title= title
 block pagecontent
 
@@ -22,6 +23,7 @@ block pagecontent
 		+header()
 			+topLine()
 		+sProjectInner()
+		+sOtherProjects()
 		//- +sProjects-main()
 	//- +sForm()
 	//- +sContact()
