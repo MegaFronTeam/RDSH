@@ -4,6 +4,7 @@
 	.section__inner {
 		background: rgba($color: #4762d5, $alpha: 0.5);
 		margin-bottom: rem(40);
+		margin-bottom: var(--sMB);
 	}
 
 	.section-title {
@@ -11,10 +12,11 @@
 		color: #293377;
 		border-radius: $border-radius;
 		padding: rem(21) rem(30) rem(20);
-		margin-bottom: var(--sTPB);
+		margin-bottom: calc(var(--sTPB) * 1.2);
 
 		h2 {
 			margin-bottom: 0;
+			letter-spacing: rem(0.4);
 		}
 	}
 
@@ -24,7 +26,7 @@
 		border-radius: rem(35);
 		overflow: hidden;
 		min-height: 360px;
-		padding: rem(23) rem(30);
+		padding: rem(24) rem(30);
 		display: flex;
 		flex-direction: column;
 
@@ -46,7 +48,7 @@
 	&__pgojectCategory {
 		background-color: #fff;
 		border-radius: $border-radius;
-		padding: rem(8) rem(10);
+		padding: rem(8) rem(17) rem(9) rem(10);
 		display: flex;
 		align-items: center;
 		font-size: $small;
@@ -90,11 +92,32 @@
 		padding: rem(13) rem(29) !important;
 	}
 
+	//content start
 	&__content {
+		padding-left: var(--sPL);
+		padding-right: var(--sPR);
 		ul {
 			padding-left: rem(50);
 		}
+
+		li {
+			padding-bottom: rem(5);
+			padding-left: 2px;
+		}
 	}
+
+	p {
+		line-height: 1.6;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 1.6rem;
+		}
+	}
+
+	h5 {
+		margin-bottom: 1.2rem;
+	}
+	//content end
+
 
 	// tabs start
 	.tabs {
@@ -102,14 +125,18 @@
 		&__caption {
 			background: rgba($color: #4762d5, $alpha: 0.5);
 			border-radius: 0 0 rem(30) rem(30);
-			padding: rem(61) rem(30) rem(24);
+			padding: rem(58) rem(30) rem(22);
 			margin-top: rem(-35);
+			margin-bottom: var(--sMB);
 			flex-wrap: wrap;
 		}
 
 		&__btn {
 			width: auto;
 			padding: rem(13) rem(20);
+			@include media-breakpoint-up(xl) {
+				margin-bottom: 0;
+			}
 		}
 
 		&__link {
