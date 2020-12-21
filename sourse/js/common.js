@@ -283,18 +283,40 @@ function eventHandler() {
 		},
 		spaceBetween: 0,
 		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
+		// navigation: {
+		// 	nextEl: '.swiper-button-next',
+		// 	prevEl: '.swiper-button-prev',
+		// },
 
 	}
 
+	const sSchoolsslider = new Swiper('.sSchools__slider--js', {
+		// ...defaultSl,
+		slidesPerView: 1,
+		spaceBetween: 25,
+		loop: true,
+		breakpoints: {
+
+			992: {
+				slidesPerView: 2
+			},
+			1200: {
+				slidesPerView: 3
+			}
+		},
+		navigation: {
+			nextEl: '.sSchools .swiper-button-next',
+			prevEl: '.sSchools .swiper-button-prev',
+		},
+
+	});
+	// modal window
 	const swiperHeaderBlock = new Swiper('.mainSlider__slider--js', {
 		// ...defaultSl,
 		slidesPerView: 2,
 		slidesPerColumn: 3,
 		spaceBetween: 0,
+		loop: true,
 		breakpoints: {
 			576: {
 				slidesPerView: 3,
@@ -330,7 +352,7 @@ function eventHandler() {
 		// $(this).parent().toggleClass('active');
 	})
 
-	$('.accardion-js').on('click', function(){
+	$('.accardion-js').on('click', function () {
 		$(this).toggleClass('active').parent().parent().toggleClass('active').find('.accardion_hidden-js').slideToggle().toggleClass('active');
 		// $(this).parent().toggleClass('active');
 	})
@@ -347,7 +369,7 @@ function eventHandler() {
 	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 		return new bootstrap.Popover(popoverTriggerEl, {
 			// template: '<div class="popover" role="tooltip"><div class="popover-arrow"></div><h3 class="popover-header">фывафыафыцва</h3><div class="popover-body"></div><div class="text-center text-primary ttu pb-2">Свободен</div></div>',
-			// trigger: 'hover',
+			trigger: 'hover',
 			placement: 'auto',
 		})
 	})

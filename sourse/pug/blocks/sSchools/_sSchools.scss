@@ -32,6 +32,7 @@
 		&__item{
 			 box-shadow: 0 5px 35px rgba(151, 180, 235, 0.06);
 			 background-color:rgba($color: #fff, $alpha: .1);
+			 height: 100%;
 			 min-height: calc(100% - var(--bs-gutter-x));
 			 margin-bottom: var(--bs-gutter-x);
 			 border-radius: 1.38889rem;
@@ -53,10 +54,28 @@
 			background-color: rgba($color: #fff, $alpha: 0.1);
 			font-size: $small;
 			padding: rem(13) rem(20);
+			// background-color: rgba($color: #fff, $alpha: .1);
+		}
+		&__slide{
+			@include media-breakpoint-up(md) {
+
+				height: auto;
+			}
 		}
 
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) { }
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(md) {
+		--swiperArrowPosition: -15px;
+	}
 } // end.sSchools
+
+@include media-breakpoint-up(md) {
+
+	.section__inner--slider-wrapper{
+		padding-left: rem(90);
+		padding-right: rem(90);
+	}
+}
