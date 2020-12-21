@@ -1,5 +1,6 @@
 $em-base: 18px;
 $small: rem(16);
+$xsmall: rem(14);
 $url: '../img/';
 $path2: '@2x/';
 $path1: '@1x/';
@@ -81,6 +82,7 @@ $theme-colors: ("primary": $primary,
   "warning": $warning,
   "danger": $danger,
   "light": $light,
+  "white": $white,
   "dark": $dark) !default;
 // scss-docs-end theme-colors-map
 
@@ -326,14 +328,14 @@ $container-max-widths: (sm: 540px,
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns: 12 !default;
-$grid-gutter-width: 1.5rem !default;
+$grid-gutter-width: 30px !default;
 $grid-row-columns: 6 !default;
 
 $gutters: $spacers !default;
 
 // Container padding
 
-$container-padding-x: $grid-gutter-width !default;
+$container-padding-x: $grid-gutter-width / 2 !default;
 
 
 // Components
@@ -693,7 +695,7 @@ box-shadow .15s ease-in-out !default;
 $form-check-input-width: 1em !default;
 $form-check-min-height: $font-size-base * $line-height-base !default;
 $form-check-padding-left: $form-check-input-width+.5em !default;
-$form-check-margin-bottom: .125rem !default;
+$form-check-margin-bottom: 0 !default;
 $form-check-label-color: null !default;
 $form-check-label-cursor: null !default;
 $form-check-transition: background-color .15s ease-in-out,
@@ -703,18 +705,18 @@ box-shadow .15s ease-in-out !default;
 
 $form-check-input-active-filter: brightness(90%) !default;
 
-$form-check-input-bg: $body-bg !default;
-$form-check-input-border: 1px solid rgba(0, 0, 0, .25) !default;
+$form-check-input-bg: rgba($color: #fff, $alpha: 0.2)  !default;
+$form-check-input-border: none !default;
 $form-check-input-border-radius: .25em !default;
 $form-check-radio-border-radius: 50% !default;
 $form-check-input-focus-border: $input-focus-border-color !default;
 $form-check-input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 
-$form-check-input-checked-color: $component-active-color !default;
-$form-check-input-checked-bg-color: $component-active-bg !default;
+$form-check-input-checked-color: $cyan !default;
+$form-check-input-checked-bg-color: #fff !default;
 $form-check-input-checked-border-color: $form-check-input-checked-bg-color !default;
-$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
-$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
+$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
+$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#7bc2ff'/></svg>") !default;
 
 $form-check-input-indeterminate-color: $component-active-color !default;
 $form-check-input-indeterminate-bg-color: $component-active-bg !default;
@@ -728,14 +730,14 @@ $form-check-btn-check-disabled-opacity: $btn-disabled-opacity !default;
 $form-switch-color: rgba(0, 0, 0, .25) !default;
 $form-switch-width: 2em !default;
 $form-switch-padding-left: $form-switch-width+.5em !default;
-$form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>") !default;
+$form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#fff'/></svg>") !default;
 $form-switch-border-radius: $form-switch-width !default;
 
 $form-switch-focus-color: $input-focus-border-color !default;
 $form-switch-focus-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-focus-color}'/></svg>") !default;
 
 $form-switch-checked-color: $component-active-color !default;
-$form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-checked-color}'/></svg>") !default;
+$form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#6a94f4'/></svg>") !default;
 $form-switch-checked-bg-position: right center !default;
 
 $form-check-inline-margin-right: 1rem !default;
@@ -761,7 +763,7 @@ $form-select-disabled-bg: $gray-200 !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
 $form-select-bg-position: right $form-select-padding-x center !default;
 $form-select-bg-size: 16px 12px !default; // In pixels because image dimensions
-$form-select-indicator-color: $gray-800 !default;
+$form-select-indicator-color: #fff !default;
 $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>") !default;
 
 $form-select-feedback-icon-padding-right: add(1em * .75, (2 * $form-select-padding-y * .75) + $form-select-padding-x + $form-select-indicator-padding) !default;
@@ -974,19 +976,19 @@ $dropdown-dark-header-color: $gray-500 !default;
 
 // Pagination
 
-$pagination-padding-y: .375rem !default;
-$pagination-padding-x: .75rem !default;
+$pagination-padding-y: .05rem !default;
+$pagination-padding-x: .1rem !default;
 $pagination-padding-y-sm: .25rem !default;
 $pagination-padding-x-sm: .5rem !default;
 $pagination-padding-y-lg: .75rem !default;
 $pagination-padding-x-lg: 1.5rem !default;
 
-$pagination-color: $link-color !default;
-$pagination-bg: $white !default;
+$pagination-color: #fff !default;
+$pagination-bg: rgba($color: #fff, $alpha: 0.1) !default;
 $pagination-border-width: $border-width !default;
 $pagination-border-radius: $border-radius !default;
-$pagination-margin-left: -$pagination-border-width !default;
-$pagination-border-color: $gray-300 !default;
+$pagination-margin-left: rem(16) !default;
+$pagination-border-color: transparent !default;
 
 $pagination-focus-color: $link-hover-color !default;
 $pagination-focus-bg: $gray-200 !default;
@@ -997,8 +999,8 @@ $pagination-hover-color: $link-hover-color !default;
 $pagination-hover-bg: $gray-200 !default;
 $pagination-hover-border-color: $gray-300 !default;
 
-$pagination-active-color: $component-active-color !default;
-$pagination-active-bg: $component-active-bg !default;
+$pagination-active-color: $cyan !default;
+$pagination-active-bg: #fff !default;
 $pagination-active-border-color: $pagination-active-bg !default;
 
 $pagination-disabled-color: $gray-600 !default;

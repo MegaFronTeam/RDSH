@@ -253,7 +253,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '08.png';
+	screenName = '10-1.png';
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -327,6 +327,11 @@ function eventHandler() {
 
 	$('.accardionToggle--js').on('click', function () {
 		$(this).toggleClass('active').parent().find('.accardion_hiddenBlock-js').slideToggle();
+		// $(this).parent().toggleClass('active');
+	})
+
+	$('.accardion-js').on('click', function(){
+		$(this).toggleClass('active').parent().parent().toggleClass('active').find('.accardion_hidden-js').slideToggle().toggleClass('active');
 		// $(this).parent().toggleClass('active');
 	})
 
