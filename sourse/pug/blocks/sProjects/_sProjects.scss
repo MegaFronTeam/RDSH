@@ -122,6 +122,7 @@
 	&__btn {
 		@extend .btn;
 		@extend .btn-success;
+		white-space: nowrap;
 	}
 
 	&__smDescr {
@@ -298,9 +299,9 @@
 		}
 
 		.form-control {
-			padding: rem(10) rem(30) rem(10) rem(10);
+			padding: rem(9.5) rem(30) rem(9.5) rem(10);
 			@include media-breakpoint-up(xxxl) {
-				padding: rem(10) rem(24);
+				padding: rem(9.5) rem(24);
 			}
 			@include media-breakpoint-down(xxxl) {
 				font-size: $small;
@@ -330,7 +331,7 @@
 		cursor: pointer;
 		background-color: rgba($color: #fff, $alpha: 0.1);
 		border-radius: $border-radius;
-		padding: rem(13) rem(20);
+		padding: rem(12) rem(20);
 		font-size: $small;
 
 		@include media-breakpoint-down(xxl) {
