@@ -1,7 +1,6 @@
 "use strict";
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
@@ -17,16 +16,17 @@ var JSCCommon = {
 				en: {
 					CLOSE: "Закрыть",
 					NEXT: "Вперед",
-					PREV: "Назад" // PLAY_START: "Start slideshow",
+					PREV: "Назад"
+					// PLAY_START: "Start slideshow",
 					// PLAY_STOP: "Pause slideshow",
 					// FULL_SCREEN: "Full screen",
 					// THUMBS: "Thumbnails",
 					// DOWNLOAD: "Download",
 					// SHARE: "Share",
 					// ZOOM: "Zoom"
-
 				}
 			},
+
 			beforeLoad: function beforeLoad() {
 				document.querySelector("html").classList.add("fixed");
 			},
@@ -39,17 +39,16 @@ var JSCCommon = {
 		});
 		$.fancybox.defaults.backFocus = false;
 		var linkModal = document.querySelectorAll('.link-modal');
-
 		function addData() {
 			linkModal.forEach(function (element) {
 				element.addEventListener('click', function () {
 					var modal = document.querySelector(element.getAttribute("href"));
 					var data = element.dataset;
-
 					function setValue(val, elem) {
 						if (elem && val) {
 							var el = modal.querySelector(elem);
-							el.tagName == "INPUT" ? el.value = val : el.innerHTML = val; // console.log(modal.querySelector(elem).tagName)
+							el.tagName == "INPUT" ? el.value = val : el.innerHTML = val;
+							// console.log(modal.querySelector(elem).tagName)
 						}
 					}
 
@@ -60,22 +59,18 @@ var JSCCommon = {
 				});
 			});
 		}
-
 		if (linkModal) addData();
 	},
 	// /modalCall
 	toggleMenu: function toggleMenu() {
 		var _this = this;
-
 		if (this.btnToggleMenuMobile) {
 			this.btnToggleMenuMobile.forEach(function (element) {
 				element.addEventListener('click', function () {
 					_this.btnToggleMenuMobile.forEach(function (element) {
 						return element.classList.toggle("on");
 					});
-
 					_this.menuMobile.classList.toggle("active");
-
 					document.body.classList.toggle("fixed");
 					document.querySelector('html').classList.toggle("fixed");
 					return false;
@@ -95,12 +90,10 @@ var JSCCommon = {
 	},
 	mobileMenu: function mobileMenu() {
 		var _this2 = this;
-
 		if (this.menuMobileLink) {
 			this.toggleMenu();
 			document.addEventListener('mouseup', function (event) {
 				var container = event.target.closest(".menu-mobile--js.active"); // (1)
-
 				if (!container) {
 					_this2.closeMenu();
 				}
@@ -135,11 +128,13 @@ var JSCCommon = {
 					tabs.Content[index].classList.add('active');
 				}
 			});
-		}); // $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+		});
+		// $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 		// 	$(this)
 		// 		.addClass('active').siblings().removeClass('active')
 		// 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
 		// 		.eq($(this).index()).fadeIn().addClass('active');
+
 		// });
 	},
 	// /tabs
@@ -154,7 +149,6 @@ var JSCCommon = {
 	// /inputMask
 	ifie: function ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-
 		if (isIE11) {
 			$("body").after('<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
@@ -165,16 +159,13 @@ var JSCCommon = {
 			var b = new Object();
 			var c;
 			a = a.substring(1).split("&");
-
 			for (var i = 0; i < a.length; i++) {
 				c = a[i].split("=");
 				b[c[0]] = c[1];
 			}
-
 			return b;
-		}(); // form
-
-
+		}();
+		// form
 		$("form").submit(function (e) {
 			e.preventDefault();
 			var th = $(this);
@@ -192,11 +183,12 @@ var JSCCommon = {
 				$.fancybox.open({
 					src: '#modal-thanks',
 					type: 'inline'
-				}); // window.location.replace("/thanks.html");
-
+				});
+				// window.location.replace("/thanks.html");
 				setTimeout(function () {
 					// Done Functions
-					th.trigger("reset"); // $.magnificPopup.close();
+					th.trigger("reset");
+					// $.magnificPopup.close();
 					// ym(53383120, 'reachGoal', 'zakaz');
 					// yaCounter55828534.reachGoal('zakaz');
 				}, 4000);
@@ -205,10 +197,11 @@ var JSCCommon = {
 	},
 	heightwindow: function heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-		var vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
+		var vh = window.innerHeight * 0.01;
+		// Then we set the value in the --vh custom property to the root of the document
+		document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
 
-		document.documentElement.style.setProperty('--vh', "".concat(vh, "px")); // We listen to the resize event
-
+		// We listen to the resize event
 		window.addEventListener('resize', function () {
 			// We execute the same script as before
 			var vh = window.innerHeight * 0.01;
@@ -245,10 +238,8 @@ var JSCCommon = {
 	}
 };
 var $ = jQuery;
-
 function eventHandler() {
 	var _defaultSl;
-
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
@@ -257,26 +248,23 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
+	JSCCommon.animateScroll();
 
+	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	var screenName;
 	screenName = '10-1.png';
-
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
 	}
-
 	function whenResize() {
 		var topH = $("header ").innerHeight();
-
 		if ($(window).scrollTop() > topH) {
 			$('.top-nav  ').addClass('fixed');
 		} else {
 			$('.top-nav  ').removeClass('fixed');
 		}
 	}
-
 	window.addEventListener('resize', function () {
 		whenResize();
 	}, {
@@ -306,8 +294,8 @@ function eventHandler() {
 			nextEl: '.sSchools .swiper-button-next',
 			prevEl: '.sSchools .swiper-button-prev'
 		}
-	}); // modal window
-
+	});
+	// modal window
 	var swiperHeaderBlock = new Swiper('.mainSlider__slider--js', {
 		// ...defaultSl,
 		slidesPerView: 2,
@@ -341,13 +329,17 @@ function eventHandler() {
 			loadPrevNext: true,
 			loadPrevNextAmount: 14
 		}
-	}); // modal window
+	});
+	// modal window
 
 	$('.accardionToggle--js').on('click', function () {
-		$(this).toggleClass('active').parent().find('.accardion_hiddenBlock-js').slideToggle(); // $(this).parent().toggleClass('active');
+		$(this).toggleClass('active').parent().find('.accardion_hiddenBlock-js').slideToggle();
+		// $(this).parent().toggleClass('active');
 	});
+
 	$('.accardion-js').on('click', function () {
-		$(this).toggleClass('active').parent().parent().toggleClass('active').find('.accardion_hidden-js').slideToggle().toggleClass('active'); // $(this).parent().toggleClass('active');
+		$(this).toggleClass('active').parent().parent().toggleClass('active').find('.accardion_hidden-js').slideToggle().toggleClass('active');
+		// $(this).parent().toggleClass('active');
 	});
 
 	window.onload = function () {
@@ -357,7 +349,6 @@ function eventHandler() {
 			document.body.classList.remove('loaded_hiding');
 		}, 500);
 	};
-
 	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
 	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 		return new bootstrap.Popover(popoverTriggerEl, {
@@ -367,9 +358,7 @@ function eventHandler() {
 		});
 	});
 }
-
 ;
-
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
